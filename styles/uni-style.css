@@ -1,0 +1,517 @@
+.body-no-scroll {
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.19rem;
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+}
+
+.btn--small {
+  font-size: .88rem;
+  padding: 7px 13px;
+  font-weight: 300;
+}
+
+.btn--with-photo {
+  padding-left: 40px;
+  position: relative;
+}
+
+.btn--orange {
+  background-color: #EE964B;
+}
+
+.btn--orange:hover {
+  background: linear-gradient(#EE964B, rgb(235, 109, 0));
+}
+
+.btn--dark-orange {
+  background-color: #F95738;
+}
+
+.btn--dark-orange:hover {
+  background: linear-gradient(#F95738, rgb(204, 34, 0));
+}
+
+.btn--blue {
+  background-color: #0D3B66;
+}
+
+.btn--blue:hover {
+  background: linear-gradient(rgb(13, 80, 143), #0D3B66);
+}
+
+.btn--yellow {
+  background-color: #F4D35E;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
+}
+
+.btn--yellow:hover {
+  background: linear-gradient(#F4D35E, rgb(240, 188, 0));
+}
+
+.btn--beige {
+  background-color: #FAF0CA;
+  color: #173f58;
+}
+
+.btn--beige:hover {
+  background-color: #F4D35E;
+}
+
+.btn--gray {
+  background-color: #222;
+}
+
+.btn--white {
+  background-color: #FFF;
+  color: #173f58;
+}
+
+.btn--white:hover {
+  background-color: #DDD;
+}
+
+.btn--large {
+  font-size: 1.3rem;
+  padding: 16px 34px;
+  border-radius: 7px;
+}
+
+@media (min-width: 530px) {
+
+  .btn--large {
+    font-size: 1.9rem;
+  }
+}
+
+.btn--inactive {
+  background-color: transparent;
+  cursor: default;
+  color: #333;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.link-list li {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 1px dotted #DEDEDE;
+}
+
+.search-overlay .link-list li {
+  font-size: 1.3rem;
+}
+
+.link-list li:last-child {
+  border-bottom: none;
+}
+
+.link-list a {
+  color: #F95738;
+}
+
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+
+.min-list li {
+  list-style: none;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.spinner-loader {
+  margin-top: 45px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: black;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+.c-orange {color: #F95738}
+
+.c-blue {color: #0D3B66}
+
+.c-white {color: #FFF}
+
+.c-dark {color: #333}
+
+.gray {color: #999999}
+
+.search-trigger {
+  display: none;
+  color: #FFF;
+  position: relative;
+  cursor: pointer;
+  top: 1px;
+  margin-left: 20px;
+}
+
+@media (min-width: 960px) {
+
+  .search-trigger {
+    display: inline-block;
+    top: 6px;
+  }
+}
+
+.search-trigger:hover {
+  opacity: .65;
+}
+/*------------------------EIGENE---------------------------*/
+
+.submitted-material{
+    visibility: hidden;
+}
+
+.submitted-material--active{
+    visibility: visible;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color:darkgrey;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 6px;
+    padding: 5px;
+    opacity: 0.5;
+    margin-top: -50px;
+
+  /* Position the tooltip */
+    left: 45%;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+#report_form{
+/*    visibility: hidden;*/
+    display: none;
+}
+
+.success-message{
+    visibility: hidden;
+    color: green;
+}
+
+.success-message--active{
+    visibility: visible;
+}
+
+/*---------------SMA-------------------------------------*/
+.sma-overlay {
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .96);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility .3s;
+  transition: opacity .3s, transform .3s, visibility .3s, -webkit-transform .3s;
+  box-sizing: border-box;
+}
+
+.sma-overlay p {
+  padding-top: 15px;
+}
+
+.sma-overlay .event-summary p {
+  padding-top: 0;
+}
+
+.sma-overlay .event-summary {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+body.admin-bar .sma-overlay {
+  top: 32px;
+}
+
+.sma-overlay__top {
+  background-color: rgba(0, 0, 0, .12);
+}
+
+.sma-overlay__icon {
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: #F95738;
+}
+
+@media (min-width: 960px) {
+
+  .sma-overlay__icon {
+    font-size: 2.5rem;
+  }
+}
+
+.sma-overlay--active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.sma-overlay__section-title {
+  margin: 30px 0 1px 0;
+  font-weight: 400;
+  color: #0D3B66;
+  font-size: 2rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #CCC;
+}
+
+.sma-overlay__close {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+  font-size: 2.1rem;
+  cursor: pointer;
+  transition: all .3s;
+  background-color: #FFF;
+  color: #F95738;
+  line-height: .7;
+}
+
+@media (min-width: 530px) {
+
+  .sma-overlay__close {
+    top: 18px;
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .sma-overlay__close {
+    top: 26px;
+    font-size: 2.8rem;
+  }
+}
+
+.sma-overlay__close:hover {
+  opacity: 1;
+}
+
+.sma-overlay .one-half {
+  padding-bottom: 0;
+}
+
+.sma-term {
+  width: 75%;
+  box-sizing: border-box;
+  border: none;
+  padding: 15px 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+  color: #F95738;
+
+}
+
+@media (min-width: 530px) {
+
+  .sma-term {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .sma-term {
+    width: 80%;
+    font-size: 3rem;
+  }
+}
+
+/*---------------------Clippings Search----------------------*/
+.search-overlay {
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .96);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility .3s;
+  transition: opacity .3s, transform .3s, visibility .3s, -webkit-transform .3s;
+  box-sizing: border-box;
+}
+
+.search-overlay p {
+  padding-top: 15px;
+}
+
+.search-overlay .event-summary p {
+  padding-top: 0;
+}
+
+.search-overlay .event-summary {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+body.admin-bar .search-overlay {
+  top: 32px;
+}
+
+.search-overlay__top {
+  background-color: rgba(0, 0, 0, .12);
+}
+
+.search-overlay__icon {
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: #F95738;
+}
+
+@media (min-width: 960px) {
+
+  .search-overlay__icon {
+    font-size: 2.5rem;
+  }
+}
+
+.search-overlay--active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.search-overlay__section-title {
+  margin: 30px 0 1px 0;
+  font-weight: 400;
+  color: #0D3B66;
+  font-size: 2rem;
+  padding: 15px 0;
+  border-bottom: 1px solid #CCC;
+}
+
+.search-overlay__close {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+  font-size: 2.1rem;
+  cursor: pointer;
+  transition: all .3s;
+  background-color: #FFF;
+  color: #F95738;
+  line-height: .7;
+}
+
+@media (min-width: 530px) {
+
+  .search-overlay__close {
+    top: 18px;
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .search-overlay__close {
+    top: 26px;
+    font-size: 2.8rem;
+  }
+}
+
+.search-overlay__close:hover {
+  opacity: 1;
+}
+
+.search-overlay .one-half {
+  padding-bottom: 0;
+}
+
+.search-term {
+  width: 75%;
+  box-sizing: border-box;
+  border: none;
+  padding: 15px 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 300;
+  outline: none;
+  color: #F95738;
+
+}
+
+@media (min-width: 530px) {
+
+  .search-term {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .search-term {
+    width: 80%;
+    font-size: 3rem;
+  }
+}
