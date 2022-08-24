@@ -60,6 +60,9 @@ jQuery(document).ready(function($){
         //${} um JS Code innerhalb des template Literals auszuführen
         //Innhalb von Template Literals kann keine if Abfrage ausgeführt werden. Daher Ternary Operator
         
+        // 'results' ist das Ergebnis, das der Search-Straing automatisch zurückgibt und in die Funktion (2. Parameter von getJSON) gibt
+        // Wieso ist der Such-Strg so universell? D.h. bezieht sich offenbar nicht nur auf ein bestimmtes Feld
+        // searchClippings.root_url -> vgl. clippings.php (wp_localize.script): schreibt js data in den quellcode (html)
         $.getJSON(searchClippings.root_url + '/wp-json/clippings/v1/search?term=' + $("#search-term").val(),(results) =>{
             $("#search-overlay__results").html(`
                 

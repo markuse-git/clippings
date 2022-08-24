@@ -38,7 +38,7 @@ function mcsm_plugin_files(){
     
     wp_enqueue_style('uni-style',MCSM_INSERT_CSS.'/uni-style.css');
     
-    wp_localize_script('search_clippings_js','searchClippings',array(
+    wp_localize_script('search_clippings_js','searchClippings',array( # 1. Parameter s.o.
         'root_url' => get_site_url()
     ));
     

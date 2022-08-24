@@ -9,10 +9,11 @@ function registerSearch(){
     ));
 }
 
-function mcsm_searchResults($data){
+function mcsm_searchResults($data){ # $data (Name beliebig) ist Info zur Suche, die WP der Funktion mitgibt
     
     global $wpdb;
     
+    # 'term' - vgl. search-clippings.js $.getJSON (API String) nach /search? 
     $clippings_search_sql = 'SELECT * FROM ' . $wpdb->prefix . 'entries
     WHERE title LIKE "%' . $data['term'] . '%"
     OR client LIKE "%' . $data['term'] . '%"
